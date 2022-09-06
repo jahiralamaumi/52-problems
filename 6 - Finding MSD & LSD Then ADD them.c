@@ -17,7 +17,8 @@ int main(){
             r = a % 10;
             a = a / 10;
         }
-        msd = r;
+        msd = r;            // ** NOTE : Number ke pow(10, position-1) dara vag korle oi position er digit pawa jaay. Eknon zehetu 5 digit er number bola ase Sehetu number k 10000 dara vag korlei msd pawa jabe
+                            // Thus: msd = n / 10000; lekha jaay
         printf("Sum = %d\n", lsd+msd);
     }
 
