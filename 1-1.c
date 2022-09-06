@@ -41,19 +41,25 @@ void selection_sort( int arr[], int size ){
     }
 }
 
+
+
+
 int main(){
-    int i, T, k, j, n, prod, a[36], size; // 100000 = 10^5 => n(n+2)+1 => n^2 + 2n + 1 => (n+1)^2 => (n+1)(n+1)
+    int T, i, n, lsd, msd, a, r;
     scanf("%d", &T);
-    for(i=1; i<=T; i++){
+
+    for( i = 0; i < T; i++){
         scanf("%d", &n);
-        for(k = 0; k < n; k++){
-            for(j = 0; j < n; j++){
-                printf("*");
-            }
-            printf("\n");
+        lsd = n % 10;
+        a = n;
+        while(a != 0){
+            r = a % 10;
+            a = a / 10;
         }
-        printf("\n");
+        msd = r;
+        printf("Sum = %d\n", lsd+msd);
     }
+
     return 0;
 
 }
